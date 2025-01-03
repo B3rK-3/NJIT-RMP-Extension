@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "NJIT RMP",
+  "version": "1.0",
+  "description": "See ratemyprofessor reviews directly on schedule builder and registration!",
+  "permissions": ["contextMenus", "storage", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "rmp.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://myhub.njit.edu/scbldr/"],
+      "js": ["script.js"]
+    }
+  ]
+}
